@@ -1,0 +1,258 @@
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.calculator{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+}
+.main-container{
+    background: gray;
+    height: 700px;
+    width: 500px;
+    border: 2px solid black;
+} */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:radial-gradient(circle at top,#555,#1b1b1b 70%);
+}
+
+/* ===========================
+        Calculator Body
+=========================== */
+
+.calculator{
+
+    width:400px;
+    padding:20px;
+
+    background:#0f1318;
+
+    border-radius:20px;
+
+    position:relative;
+
+    transform:
+        perspective(1200px)
+        rotateX(16deg)
+        rotateZ(-7deg);
+
+    transform-style:preserve-3d;
+
+    box-shadow:
+        20px 20px 35px rgba(0,0,0,.45),
+        35px 35px 60px rgba(0,0,0,.25);
+}
+
+/* Right Side */
+
+.calculator::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:8px;
+    right:-16px;
+
+    width:16px;
+    height:100%;
+
+
+    transform:skewY(-45deg);
+
+    border-radius:0 12px 12px 0;
+}
+
+/* Bottom Side */
+
+.calculator::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:8px;
+    bottom:-16px;
+
+    width:100%;
+    height:16px;
+
+    transform:skewX(-45deg);
+
+    border-radius:0 0 12px 12px;
+}
+
+/* ===========================
+          Screen
+=========================== */
+
+.screen{
+
+    height:75px;
+
+    background:#79f5ff;
+
+    border-radius:18px;
+
+    display:flex;
+    justify-content:flex-end;
+    align-items:center;
+
+    padding-right:20px;
+
+    margin-bottom:20px;
+
+    box-shadow:
+        6px 6px 0 #68727d,
+        0 0 15px #49ecff;
+}
+
+.screen span{
+
+    color:#084b61;
+
+    font-size:38px;
+
+    font-style:italic;
+
+    font-weight:bold;
+}
+
+/* ===========================
+          Keyboard
+=========================== */
+
+.keyboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:12px;
+}
+
+/* ===========================
+            Buttons
+=========================== */
+
+button{
+
+    position:relative;
+
+    height:65px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#11161d;
+
+    color:white;
+
+    font-size:28px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:
+        5px 5px 0 #707984,
+        0 0 10px #4cecff;
+
+    transition:.2s;
+}
+
+/* Button Glow */
+
+button::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    border-radius:14px;
+
+    box-shadow:0 0 10px #4cecff;
+
+    opacity:.45;
+
+    pointer-events:none;
+}
+
+/* Right Side of Button */
+
+button::after{
+
+    content:"";
+
+    position:absolute;
+
+    top:4px;
+    right:-6px;
+
+    width:6px;
+    height:100%;
+
+    background:#737d87;
+
+    transform:skewY(-45deg);
+
+    border-radius:0 6px 6px 0;
+}
+
+/* Hover */
+
+button:hover{
+
+    transform:translateY(-2px);
+
+    box-shadow:
+        6px 6px 0 #707984,
+        0 0 15px #4cecff;
+}
+
+/* Click */
+
+button:active{
+
+    transform:translate(3px,3px);
+
+    box-shadow:
+        2px 2px 0 #707984,
+        0 0 5px #4cecff;
+}
+
+/* ===========================
+      Special Buttons
+=========================== */
+
+.zero{
+
+    grid-column:span 2;
+}
+
+.tall{
+
+    grid-row:span 2;
+
+    height:142px;
+}
