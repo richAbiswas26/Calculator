@@ -6,9 +6,7 @@ A simple and responsive calculator built using **HTML**, **CSS**, and **Vanilla 
 
 ## 📸 Preview
 
-<img width="700" alt="Calculator Preview" src="assets/Screenshot calculator.png">
-
-> Replace the image above with a screenshot of your project after uploading it to GitHub.
+<img width="700" alt="Calculator Preview" src="assets/Screenshot.png">
 
 ---
 
