@@ -39,6 +39,9 @@ A simple and responsive calculator built using **HTML**, **CSS**, and **Vanilla 
 ```
 Calculator/
 │
+├── assets/
+│   │
+│   ├── Screenshot.png
 ├── index.html
 ├── style.css
 ├── script.js
@@ -107,11 +110,6 @@ Simply open `index.html` in your browser.
 
 ## 📸 Screenshots
 
-### Calculator UI
-
-Add your screenshot here.
-
----
 
 ## 📚 Concepts Practiced
 
@@ -142,9 +140,9 @@ For learning purposes this is acceptable, but in production applications it is r
 
 **Richa Biswas**
 
-GitHub: https://github.com/your-github-username
+GitHub: https://github.com/richAbiswas26
 
-LinkedIn: https://linkedin.com/in/your-linkedin
+LinkedIn: https://www.linkedin.com/in/richabiswas/
 
 ---
 
